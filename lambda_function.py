@@ -35,6 +35,11 @@ def process_registro(registro):
     registro['segment_list'] = setores
     registro['type_list'] = tipos
     registro['data_pregao'] = data_pregao
+
+    # Converte campos para números
+    registro['part']=float(registro['part'].replace('.', '').replace(',', '.'))
+    registro['partAcum']=float(registro['partAcum'].replace('.', '').replace(',', '.'))
+    registro['theoricalQty']=float(registro['theoricalQty'].replace('.', '').replace(',', '.'))
     return registro
 
 
@@ -57,9 +62,9 @@ def criar_tabela_raw(bucket, s3_key):
                 {"Name": "cod", "Type": "string"},
                 {"Name": "asset", "Type": "string"},
                 {"Name": "type", "Type": "string"},
-                {"Name": "part", "Type": "string"},
-                {"Name": "partAcum", "Type": "string"},
-                {"Name": "theoricalQty", "Type": "string"},
+                {"Name": "part", "Type": "double"},
+                {"Name": "partAcum", "Type": "double"},
+                {"Name": "theoricalQty", "Type": "double"},
                 # {"Name": "segment_list", "Type": "string"},
                 # {"Name": "type_list", "Type": "string"}
             ],
