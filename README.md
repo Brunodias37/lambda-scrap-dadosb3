@@ -3,6 +3,27 @@
 Este projeto é uma função AWS Lambda responsável por coletar informações de portfólio diário da B3, processá-las e armazená-las em formato Parquet no Amazon S3. Ele também registra os dados no AWS Glue e repara a tabela usando o Athena.
 
 ---
+## 🧩 Layer Lambda Personalizado
+
+Este projeto utiliza um **Lambda Layer** para incluir dependências externas como `pandas`, `pyarrow`, `s3fs`, entre outras bibliotecas necessárias para o funcionamento da função.
+
+🔗 **Download do Layer**:  
+👉 [Clique aqui para baixar o layer utilizado](https://drive.google.com/file/d/1WEEQALPhkLr4gmpK0PY1W5E4XPYkKdox/view?usp=sharing)
+
+### 📦 Conteúdo do Layer
+
+O layer contém as seguintes dependências:
+- `requests`
+- `pandas`
+- `s3fs`
+- `pyarrow`
+- `boto3`
+
+💡 **Dica:** Ao criar sua função Lambda, certifique-se de:
+- Associar este layer à função.
+- Usar um runtime compatível (por exemplo, Python 3.9).
+- Verificar se o tamanho total (código + layer) está dentro do limite da AWS.
+
 
 ## 🚀 Visão Geral do Processo
 
