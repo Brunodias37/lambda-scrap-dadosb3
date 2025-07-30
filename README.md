@@ -38,9 +38,9 @@ Este projeto é uma função AWS Lambda responsável por coletar informações d
 ## 📌 Pré-requisitos
 
 - Conta AWS com permissões para Lambda, S3, Glue e Athena  
-- Bucket S3 existente: `bovespa-204590505567`  
+- Bucket S3 existente: `bovespa-{id_conta_aws}`  
 - Pasta: `raw/tb_dados_b3_raw`  
-- Resultado das queries do Athena: `s3://bovespa-204590505567/athena-query-results/`
+- Resultado das queries do Athena: `s3://bovespa-{id_conta_aws}/athena-query-results/`
 
 ---
 
