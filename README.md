@@ -108,5 +108,3 @@ lambda_handler(None, None)
 Sugestões de melhorias são bem-vindas! Basta abrir uma issue ou pull request 😄
 
 ---
-
-Se quiser que eu transforme isso num projeto com estrutura de arquivos e até crie exemplos de consulta com Athena, posso te ajudar com isso também! 💡
